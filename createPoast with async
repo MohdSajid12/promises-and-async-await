@@ -1,0 +1,16 @@
+
+function createPost(post){
+    return new Promise((resolve, reject) => {
+const createPost = async (post) => {
+    const create = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            posts.push(post);
+            const err = false;
+            if(!err){
+                resolve(posts);
+                // resolve(deletePost()); - create & delete at same time
+            } else {
+                reject("Error");
+            }
+        }, 1000)
+    })
